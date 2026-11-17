@@ -24,7 +24,7 @@ Tested with both common timing packages: tempo2 (through libstempo 2.5.1) fits n
 
 **A second, smaller item.** In `J1730-2304_singlePsrNoise_fit.par`, line 2, the fit flag of `ELONG` is `10`. The two packages read it differently: tempo2 still fits both coordinates, while PINT freezes `ELONG` and fits `ELAT`. It looks like a typing slip for `1`.
 
-**Already known?** No erratum or note was found. The portal's current listing shows both files with the sizes of the copies used here (2,497 and 4,886 bytes), last changed in June 2023. As of 17 November 2026 this has not been reported to the PPTA.
+**Already known?** No erratum or note was found. The portal's current listing shows both files with the sizes of the copies used here (2,497 and 4,886 bytes), last changed in June 2023. It was reported by email to the contact named on the portal's collection record on 17 November 2026. Any reply will be noted here.
 
 SHA-256 of the two files used: `cc6a129442d70442d64d1ec42e2b8b50f8f4b632d4be00604340daa51b38a9b4` and `d3f9e61083e2515a16c76321092af50e982f903115d1fd77c98e87094f28fc03`.
 
