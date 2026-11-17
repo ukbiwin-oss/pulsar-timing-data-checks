@@ -38,6 +38,8 @@ Data: European Pulsar Timing Array second data release, `gitlab.in2p3.fr/epta/ep
 
 **What is left.** `red_dict.json` gives J2322+2057 ten red-noise bins in all four data sets. The EPTA's paper on the noise models (second DR2 paper, tables 4 and 5) lists that pulsar's model as "NONE": no time-correlated noise. The release scripts would therefore give it a red-noise term that the paper says the data do not support. The effect is probably small, and it may be deliberate. This is a question, not a defect.
 
+The question was sent by email to the EPTA's public contact address on 17 November 2026. Any reply will be noted here.
+
 ## 3. NANOGrav 15-year analysis files: three pulsars with directions half a degree off (real, already fixed upstream)
 
 Data: `nanograv/15yr_stochastic_analysis`, commit `a3e8b87`, folder `tutorials/data/feathers/`; parameter files from the 15-year release v2.1.0.
