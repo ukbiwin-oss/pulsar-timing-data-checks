@@ -1,0 +1,38 @@
+$ python3 01_ppta_frozen_position.py ppta_dr3/toas_and_parameters
+all/: 64 par files; position lines without fit flag: 3
+      J1545-4550.par line 2: ELONG          244.8215460139450703885843907
+      J1545-4550.par line 3: ELAT           -25.2911165051116105274842116
+      J1730-2304_singlePsrNoise_fit.par line 2: ELONG          263.1860411579295689898927435 10
+dr2/: 26 par files; position lines without fit flag: 0
+uwl/: 32 par files; position lines without fit flag: 0
+
+$ python3 02_epta_noise_terms.py EPTA-DR2/noisefiles
+DR2full:
+   J2322+2057: red_dict.json gives 10 bins, but J2322+2057_noise.json has no parameter of that process
+   J1600-3053: chrom_dict.json gives 137 bins, but J1600-3053_noise.json has no parameter of that process
+   J1713+0747_noise.json: 54 keys; exponential-dip keys: []
+DR2full+:
+   J2322+2057: red_dict.json gives 10 bins, but J2322+2057_noise.json has no parameter of that process
+   J1713+0747_noise.json: 62 keys; exponential-dip keys: []
+DR2new:
+   J2322+2057: red_dict.json gives 10 bins, but J2322+2057_noise.json has no parameter of that process
+   J1713+0747_noise.json: 33 keys; exponential-dip keys: ['expd-1.0_57490_57530_log10_Amp', 'expd-1.0_57490_57530_log10_tau', 'expd-1.0_57490_57530_t0']
+DR2new+:
+   J2322+2057: red_dict.json gives 10 bins, but J2322+2057_noise.json has no parameter of that process
+   J1713+0747_noise.json: 41 keys; exponential-dip keys: ['expd-1.0_57490_57530_log10_Amp', 'expd-1.0_57490_57530_log10_tau', 'expd-1.0_57490_57530_t0']
+
+$ python 03_nanograv_b1950.py 15yr_stochastic_analysis/tutorials/data/feathers NANOGrav15yr_PulsarTiming_v2.1.0/narrowband/par
+67 feather files; "pos" and pos_t differ by more than 1 arcsecond in 3:
+   B1855+09: pos against pos_t 0.5899 deg; pos against par direction with epoch "1950" 0.00e+00 arcsec; pos_t against par direction with epoch "2000" 3.41e-02 arcsec
+   B1937+21: pos against pos_t 0.5162 deg; pos against par direction with epoch "1950" 0.00e+00 arcsec; pos_t against par direction with epoch "2000" 3.78e-02 arcsec
+   B1953+29: pos against pos_t 0.4607 deg; pos against par direction with epoch "1950" 0.00e+00 arcsec; pos_t against par direction with epoch "2000" 3.21e-02 arcsec
+
+$ python 04_hellings_downs_shift.py 15yr_stochastic_analysis/tutorials/data/feathers
+67 pulsars; affected: ['B1855+09', 'B1937+21', 'B1953+29']
+   B1855+09 - B1937+21: separation changes by 0.0000 deg, Hellings-Downs value by 2.0e-08
+   B1855+09 - B1953+29: separation changes by 0.0000 deg, Hellings-Downs value by 6.3e-09
+   B1937+21 - B1855+09: separation changes by 0.0000 deg, Hellings-Downs value by 2.0e-08
+   B1937+21 - B1953+29: separation changes by 0.0000 deg, Hellings-Downs value by 1.2e-08
+   B1953+29 - B1855+09: separation changes by 0.0000 deg, Hellings-Downs value by 6.3e-09
+   B1953+29 - B1937+21: separation changes by 0.0000 deg, Hellings-Downs value by 1.2e-08
+   pairs of an affected with an unaffected pulsar (192): largest change of separation 0.590 deg, of the Hellings-Downs value 0.0073
